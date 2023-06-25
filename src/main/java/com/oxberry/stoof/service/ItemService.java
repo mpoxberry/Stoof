@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class ItemService {
 
-    ItemRepository entityRepository;
+    ItemRepository itemRepository;
 
     public void upsert(Item item) {
         log.info("inside ItemService saveOrUpdate");
-        entityRepository.save(item);
+        itemRepository.save(item);
     }
 }

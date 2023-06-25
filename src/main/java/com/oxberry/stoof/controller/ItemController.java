@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class ItemController {
 
-    private ItemService entityService;
+    private ItemService itemService;
 
     @PostMapping("/rest/item")
     public void saveOrUpdateItem(@RequestBody Item entity) {
         log.info("inside ItemController saveOrUpdate");
-        entityService.upsert(entity);
+        itemService.upsert(entity);
     }
 }

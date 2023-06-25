@@ -1,13 +1,14 @@
 package com.oxberry.stoof.model;
 
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 
 @Entity
 @Table
@@ -15,25 +16,26 @@ import javax.persistence.Table;
 public class Item {
 
     @Id
-    @Column
+    @GeneratedValue( strategy = GenerationType.IDENTITY )
+    @Column( name = "ITEM_ID")
     private int id;
 
-    @Column
+    @Column( name = "NAME")
     private String name;
 
-    @Column
+    @Column(name = "DESCRIPTION")
     private String description;
 
-    @Column
+    @Column(name = "TYPE_ID")
     private int typeId;
 
-    @Column
+    @Column(name = "DATE_OF_PURCHASE")
     private String dateOfPurchase;
 
-    @Column
+    @Column(name = "PURCHASE_VALUE")
     private double purchaseValue;
 
-    @Column
+    @Column(name = "LOCATION_ID")
     private int locationId;
 
 }

@@ -30,3 +30,15 @@ CREATE TABLE LOCATION (
     building_name VARCHAR(128),
     description VARCHAR(256)
 );
+
+DROP TABLE IF EXISTS ROOM;
+CREATE TABLE ROOM (
+    room_id INT not null auto_increment primary key ,
+    room_name VARCHAR,
+    width INT,
+    length INT,
+    ceiling_height INT,
+    flooring_type VARCHAR,
+    wall_color VARCHAR,
+    created_timeStamp TIMESTAMP WITH TIME ZONE
+);

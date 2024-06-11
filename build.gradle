@@ -1,14 +1,15 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.5'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
     id 'java'
-    id 'org.springframework.experimental.aot' version '0.12.1'
+    id 'org.springframework.boot' version '3.1.5'
+    id 'io.spring.dependency-management' version '1.1.3'
 }
 
 group = 'com.oxberry'
-version = '0.0.2-SNAPSHOT'
-sourceCompatibility = '17'
+version = '0.0.2'
 
+java {
+    sourceCompatibility = '17'
+}
 
 configurations {
     compileOnly {
@@ -17,26 +18,22 @@ configurations {
 }
 
 repositories {
-    maven { url 'https://repo.spring.io/release' }
     mavenCentral()
 }
 
 ext {
-    set('springBootAdminVersion', "2.7.4")
+    set('springBootAdminVersion', "3.2.5")
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-//    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'de.codecentric:spring-boot-admin-starter-client'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    runtimeOnly 'com.h2database:h2'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.security:spring-security-test'
 }
 
 dependencyManagement {
@@ -45,11 +42,10 @@ dependencyManagement {
     }
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
+tasks.named('bootBuildImage') {
+    builder = 'paketobuildpacks/builder-jammy-base:latest'
 }
 
-tasks.named('bootBuildImage') {
-    builder = 'paketobuildpacks/builder:tiny'
-    environment = ['BP_NATIVE_IMAGE': 'true']
+tasks.named('test') {
+    useJUnitPlatform()
 }

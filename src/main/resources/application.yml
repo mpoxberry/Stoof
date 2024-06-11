@@ -2,9 +2,12 @@ spring:
   application:
     name: stoof
   datasource:
-    url: jdbc:h2:mem:stoofdb
+    url: jdbc:h2:mem:stoof
     username: sa
-    password:
+    password: password
     driver-class-name: org.h2.Driver
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true

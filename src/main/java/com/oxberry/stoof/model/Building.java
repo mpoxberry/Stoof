@@ -5,8 +5,11 @@ import lombok.Data;
 @Data
 public class Building {
 
-    int id;
-    String name;
-    String description;
-
+    private int id;
+    private boolean mainBuilding;
+    private String name;
+    private String description;
+    private double width;
+    private double length;
+    private double height;
 }

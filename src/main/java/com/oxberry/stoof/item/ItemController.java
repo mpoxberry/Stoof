@@ -1,7 +1,6 @@
-package com.oxberry.stoof.controller;
+package com.oxberry.stoof.item;
 
 import com.oxberry.stoof.model.Item;
-import com.oxberry.stoof.service.ItemService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;

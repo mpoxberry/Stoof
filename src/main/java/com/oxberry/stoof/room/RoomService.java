@@ -1,4 +1,4 @@
-package com.oxberry.stoof.service;
+package com.oxberry.stoof.room;
 
 import com.oxberry.stoof.model.Room;
 import com.oxberry.stoof.repository.RoomRepository;

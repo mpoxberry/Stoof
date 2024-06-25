@@ -1,7 +1,6 @@
-package com.oxberry.stoof.controller;
+package com.oxberry.stoof.room;
 
 import com.oxberry.stoof.model.Room;
-import com.oxberry.stoof.service.RoomService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.DeleteMapping;

@@ -4,6 +4,8 @@
 .gradle
 .idea
 /build/
+bin/
+.vscode/
 
 # User-specific stuff
 .idea/**/workspace.xml

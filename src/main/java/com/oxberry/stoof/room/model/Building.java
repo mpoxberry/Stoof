@@ -1,12 +1,15 @@
 package com.oxberry.stoof.room.model;
 
+import com.oxberry.stoof.model.BaseModel;
+
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
-public class Building {
+@EqualsAndHashCode(callSuper = false)
+public class Building extends BaseModel {
 
-    int id;
-    String name;
+    String buldingName;
     String description;
 
 }

@@ -1,4 +1,4 @@
-package com.oxberry.stoof.model;
+package com.oxberry.stoof.room.model;
 
 import lombok.Data;
 

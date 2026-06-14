@@ -11,7 +11,8 @@ CREATE TABLE room (
     roomName TEXT,
     squareFootage REAL,
     ceilingHeight REAL,
-    numberOfWindows INTEGER
+    numberOfWindows INTEGER,
+    buldingId INTEGER
 );
 
 CREATE TABLE building (

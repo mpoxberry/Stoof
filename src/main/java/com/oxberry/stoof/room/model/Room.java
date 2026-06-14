@@ -13,5 +13,6 @@ public class Room extends BaseModel {
     Double squareFootage;
     Double ceilingHeight;
     int numberOfWindows;
+    int buldingId;
 
 }
